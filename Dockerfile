@@ -40,10 +40,10 @@ RUN apt-get update && \
 
 RUN adduser --home=/opt/libreoffice --disabled-password --gecos "" --shell=/bin/bash libreoffice
 
-ADD entrypoint.sh /opt/libreoffice/entrypoint.sh
-RUN chmod +x /opt/libreoffice/entrypoint.sh
+ADD entrypoint-socket.sh /opt/libreoffice/entrypoint-socket.sh
+RUN chmod +x /opt/libreoffice/entrypoint-socket.sh
 
 VOLUME ["/tmp"]
 WORKDIR "/tmp"
 
-ENTRYPOINT ["/opt/libreoffice/entrypoint.sh"]
+ENTRYPOINT ["/opt/libreoffice/entrypoint-socket.sh"]

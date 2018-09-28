@@ -17,3 +17,7 @@ As one example we provide the `convert.sh` script to convert a given local offic
 ## Docker Hub
 
 Our image will be published on docker hub.
+
+## Changes 
+
+* use in socket mode 
